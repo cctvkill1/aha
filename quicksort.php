@@ -1,5 +1,5 @@
 <?php
-$pagestartime=microtime(); 
+$pagestartime = microtime(); 
 //快速排序
 //数组中找个基数，将基数定位，然后基数左右两边的递归此方法，知道两边都排序
 //时间复杂度最差的时候和冒泡排序一样 都是O(N²) 平均是O(NlogN) 差不多是6点几(N为10)
