@@ -15,6 +15,6 @@ for ($i = 1; $i <= $n; $i++) {
 }
 shuffle($tmp);
 $q->data = $tmp;
-var_dump($q->data);
+// var_dump($q->data);
 
 ?>
