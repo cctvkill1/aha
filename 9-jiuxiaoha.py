@@ -11,26 +11,23 @@ def dfs(x, y, step):
     global endX
     global endY
     global book
-    global labyrinthMap
-    # print(step)
-    print(labyrinthMap[x][y])
-    # if x == endX and y == endY:
-    if labyrinthMap[x][y] == 2:
+    global labyrinthMap 
+    if x == endX and y == endY: 
+        print (step)
         if step < minStep:
             minStep = step
-            pritn(minStep,'----over')
+            print(minStep, '----over')
         return
     for k in range(4):
         tx = x + next[k][0]
         ty = y + next[k][1]
+
         if tx < 0 or tx >= n or ty < 0 or ty >= m:
-            continue
+            continue  
         if labyrinthMap[tx][ty] == 0 and book[tx][ty] == 0:
-            book[tx][ty] = 1
-            # print(book)
+            book[tx][ty] = 1 
             dfs(tx, ty, step + 1)
-            book[tx][ty] = 0
-    print('for-over')
+            book[tx][ty] = 0 
     return
 
 if __name__ == '__main__':
@@ -43,10 +40,9 @@ if __name__ == '__main__':
     next[0][1] = 1
     next[1][0] = 1
     next[2][1] = -1
-    next[3][0] = -1
-    print(next)
+    next[3][0] = -1 
     book = [([0] * m) for i in range(n)]
-    labyrinthMap =  [([0] * m) for i in range(n)]
+    labyrinthMap = [([0] * m) for i in range(n)]
     print(n, '-', m)
     # 迷宫地图 0是空地 1是障碍物
     # for x in range(n):
@@ -78,13 +74,10 @@ if __name__ == '__main__':
     # endX = random.randint(1, n-1)
     # endY = random.randint(1, m-1)
     endX = 3
-    endY = 2
-    labyrinthMap[endX][endY] = 2
+    endY = 2 
     book[startX][startY] = 1
-    dfs(startX, startY, 0)
-    labyrinthMap[0][0] = 0
+    dfs(startX, startY, 0) 
     for x in range(n):
-        print(labyrinthMap[x])
-    print(book)
+        print(labyrinthMap[x]) 
     print('最短路径%d步' % minStep)
     sys.exit(-1)
