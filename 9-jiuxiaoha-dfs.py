@@ -1,4 +1,4 @@
-# 解救小哈 最短路径搜索
+# 解救小哈 最短路径搜索 深度优先搜索
 import sys
 import random
 
