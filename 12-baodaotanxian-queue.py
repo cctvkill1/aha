@@ -27,8 +27,7 @@ if __name__ == '__main__':
     book[startX][startY] = 1  
     row = {'x': startX, 'y': startY}
     q.put(row)
-    sumNum += 1
-    flag = 0
+    sumNum += 1 
     while q.qsize() != 0:
         now = q.get()
         print(now,q.qsize(),q.qsize())

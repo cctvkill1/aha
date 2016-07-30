@@ -27,8 +27,7 @@ if __name__ == '__main__':
     qList = []
     row = {'x': startX, 'y': startY}
     qList.append(row)
-    sumNum += 1
-    flag = 0
+    sumNum += 1 
     while len(qList) != 0:
         for k in range(4):
             tx = qList[0]['x'] + next[k][0]
